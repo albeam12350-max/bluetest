@@ -1,7 +1,10 @@
 from flask import Flask, render_template
+
 app = Flask(__name__)
 
 @app.route("/")
-def home():
-    return "Hola desde Flask en Azure!"
+def mostrar_documento():
+    return render_template("documento.html")
 
+if __name__ == "__main__":
+    app.run(debug=True)
